@@ -6,16 +6,13 @@ import TextPage from './pages/Text';
 import ButtonsPage from './pages/ButtonsPage';
 import NotFound from './pages/NotFound';
 
-import coreExtensionModuleUrl from './AppCoreExtensions.js?importChunkUrl';
 import coreWorkerUrl from './threadx-core-worker.js?importChunkUrl';
 
 Config.debug = true;
-Config.fontSettings.fontFamily = 'Ubuntu';
 Config.fontSettings.color = 0xffffffff;
 
 const driver = 'main';
 const RenderOptions = {
-  coreExtensionModule: coreExtensionModuleUrl,
   threadXCoreWorkerUrl: driver === 'threadx' ? coreWorkerUrl : undefined,
   numImageWorkers: 2,
   // deviceLogicalPixelRatio: 1
